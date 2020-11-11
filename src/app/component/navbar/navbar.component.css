@@ -1,0 +1,33 @@
+@media (max-width: 768px){
+
+}
+@media (min-width: 769px) {
+  .navbar{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .navbarItem{
+    padding: 20px;
+    margin-right: 40px;
+    font-family: Arial;
+    font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .navbarItem:hover{
+    cursor: pointer;
+    color: #186d1b;
+  }
+
+  .navbarItem:active{
+    cursor: pointer;
+    color: #186d1b;
+  }
+}

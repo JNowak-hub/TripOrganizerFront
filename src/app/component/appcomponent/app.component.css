@@ -1,0 +1,21 @@
+.mainPhoto{
+  background-image: url("desktop-3173176_1280.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial Black";
+  font-size: 15px;
+
+}
+@media (max-width: 768px){
+}
+@media (min-width: 769px) {
+  .mainPhoto{
+    width: 100%;
+    height: 200px;
+  }
+}
