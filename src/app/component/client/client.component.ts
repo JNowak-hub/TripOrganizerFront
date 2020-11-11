@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Client} from "../../model/Client";
+import {ClientModel} from "../../model/ClientModel";
 import {ClientService} from "../../service/client/client.service";
 
 @Component({
@@ -12,7 +12,7 @@ export class ClientComponent implements OnInit {
   lastName: string;
   passport: string;
 
-  clients: Client[];
+  clients: ClientModel[];
 
   constructor(private clientService: ClientService) { }
 
@@ -27,7 +27,7 @@ export class ClientComponent implements OnInit {
   }
 
   onSubmit() {
-    const client: Client = {
+    const client: ClientModel = {
       firstName: this.firstName,
       lastName: this.lastName,
       passportNumber: this.passport
@@ -40,7 +40,7 @@ export class ClientComponent implements OnInit {
     this.passport = '';
   }
 
-  deleteClient(client: Client, index: number) {
+  deleteClient(client: ClientModel, index: number) {
     this.clientService.deleteClient(client.id).subscribe(client => this.clients.splice(index, 1));
   }
 }
