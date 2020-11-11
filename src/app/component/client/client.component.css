@@ -81,11 +81,13 @@ input{
 }
 @media (min-width: 769px) {
   .mainPhoto{
-    margin-right: 20px;
-    width: 50%;
-    height: 450px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    width: 40%;
+    height: 490px;
   }
   .clientDiv{
     margin-top: 20px;
+    margin-right: 50px;
   }
 }

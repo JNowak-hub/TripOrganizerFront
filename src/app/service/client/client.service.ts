@@ -8,11 +8,11 @@ import {ClientModel} from "../../model/ClientModel";
 })
 export class ClientService {
 
-  clientToUpdate: ClientModel;
-
   url = "https://travelorganizatorapp.herokuapp.com/client";
+  clientToUpdate: ClientModel;
+  clients: ClientModel[];
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
   public getClients(): Observable<ClientModel[]> {
     return this.httpClient.get<ClientModel[]>(this.url + '/all');
