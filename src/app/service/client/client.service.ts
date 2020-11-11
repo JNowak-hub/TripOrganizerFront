@@ -20,8 +20,8 @@ export class ClientService {
     return this.httpClient.post<ClientModel>(this.url, client);
   }
 
-  public updateClient(client: ClientModel): Observable<ClientModel> {
-    return this.httpClient.patch<ClientModel>(this.url, client);
+  public updateClient(client: ClientModel, clientId: number): Observable<ClientModel> {
+    return this.httpClient.patch<ClientModel>(this.url + '?clientId=' + clientId, client);
   }
 
   public deleteClient(id: number): Observable<ClientModel> {
