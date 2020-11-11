@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit()">
+  <label>Edytuj klienta</label>
+  <div class="inputDiv">
+    <label>Imię</label>
+    <input type="text" name="firstName" [(ngModel)]="firstName">
+  </div>
+  <div class="inputDiv">
+    <label>Nazwisko</label>
+    <input type="text" name="lastName" [(ngModel)]="lastName">
+  </div>
+  <div class="inputDiv">
+    <input type="submit" value="Edytuj">
+  </div>
+</form>

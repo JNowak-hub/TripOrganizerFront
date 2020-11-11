@@ -34,8 +34,9 @@
     <td>{{client.firstName}}</td>
     <td>{{client.lastName}}</td>
     <td>{{client.passportNumber}}</td>
-    <td><button>Edytuj</button></td>
+    <td><button (click)="edit(client)">Edytuj</button></td>
     <td><button (click)="deleteClient(client, i)">Usuń</button></td>
   </tr>
   </tbody>
+
 </table>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ClientModel} from "../../model/ClientModel";
 import {ClientService} from "../../service/client/client.service";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {UpdateClientComponent} from "../update-client/update-client.component";
 
 @Component({
   selector: 'app-client',
@@ -14,7 +16,7 @@ export class ClientComponent implements OnInit {
 
   clients: ClientModel[];
 
-  constructor(private clientService: ClientService) { }
+  constructor(private clientService: ClientService, private matDialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getClients();
@@ -42,5 +44,14 @@ export class ClientComponent implements OnInit {
 
   deleteClient(client: ClientModel, index: number) {
     this.clientService.deleteClient(client.id).subscribe(client => this.clients.splice(index, 1));
+  }
+
+  edit(client: ClientModel) {
+    this.clientService.setClientToUpdate(client);
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = false;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '50%';
+    this.matDialog.open(UpdateClientComponent,dialogConfig);
   }
 }

@@ -8,6 +8,8 @@ import {ClientModel} from "../../model/ClientModel";
 })
 export class ClientService {
 
+  clientToUpdate: ClientModel;
+
   url = "https://travelorganizatorapp.herokuapp.com/client";
 
   constructor(private httpClient: HttpClient) { }
@@ -26,5 +28,9 @@ export class ClientService {
 
   public deleteClient(id: number): Observable<ClientModel> {
     return this.httpClient.delete<ClientModel>(this.url + '?clientId=' + id);
+  }
+
+  public setClientToUpdate(client: ClientModel): void {
+    this.clientToUpdate = client;
   }
 }

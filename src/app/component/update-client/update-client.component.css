@@ -1,0 +1,26 @@
+form{
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inputDiv{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+}
+input{
+  background-color: #C4C4C4;
+}
+
+@media (max-width: 768px){
+}
+@media (min-width: 769px) {
+
+  .clientDiv{
+    margin-top: 20px;
+  }
+}
